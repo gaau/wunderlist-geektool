@@ -20,7 +20,7 @@ require 'sqlite3'
 # http://stackoverflow.com/questions/2797020/ruby-gem-not-found-although-it-is-installed
 # ###########################################
 
-db = SQLite3::Database.new( "/Users/olegunnar/Library/Application Support/Titanium/appdata/com.wunderkinder.wunderlist/wunderlist.db" )
+db = SQLite3::Database.new( "/Users/<<username>>/Library/Application Support/Titanium/appdata/com.wunderkinder.wunderlist/wunderlist.db" )
 
 db.results_as_hash = true # results returned as a hash, rather than an ordered array
 db.type_translation = true # results resurned as their native types (according to the column definition) rather than String
@@ -34,7 +34,7 @@ INDENT = "     "
 
 db.execute("select id, name, position from lists where deleted = '0' order by position") do |list|
     printedHeader = false
-    db.execute("select id, date, name, note, important, position from tasks where deleted = 0 and done = 0 and list_id = ? order by date DESC, important DESC, position", list['id']) do |task|
+    db.execute("select id, date, name, note, important, position from tasks where deleted = 0 and done = 0 and list_id = ? order by position", list['id']) do |task|
     
         # There is a task associated with this list, so print the header
         if (printedHeader == false) then
