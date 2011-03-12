@@ -12,7 +12,7 @@ If a task is marked as IMPORTANT in wunderlist, it will be prefaced with a star 
 If a task has a date in wunderlist, it will be displayed. If the date is in the past, it will be styled with the `ESCAPE_PAST_DUE_COLOR`  
 Project names are styled with `ESCAPE_PROJECT_NAME_MARKUP`  
 Notes will be displayed, if present, and are styled with `ESCAPE_NOTE_MARKUP`  
-Tasks are ordered in the order they are shown in the order they are displayed in the winderlist interface. Dated items are moved to the top.
+Tasks are ordered in the order they are shown in the order they are displayed in the winderlist interface.
 
 ## How to Use in geektool
 Just make a new geeklet, and type the path and name of the `command`
