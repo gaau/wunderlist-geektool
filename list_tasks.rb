@@ -7,7 +7,9 @@
 #   exports them in a ANSI marked up manner appropriate for display in geektool3
 # ##########################################
 
+require 'rubygems'
 require 'sqlite3'
+
 # ##########################################
 # If you are getting errors on the above line
 # then you do not have sqlite3 installed correctly
@@ -18,7 +20,7 @@ require 'sqlite3'
 # http://stackoverflow.com/questions/2797020/ruby-gem-not-found-although-it-is-installed
 # ###########################################
 
-db = SQLite3::Database.new( "/Users/<<your username here>>/Library/Application Support/Titanium/appdata/com.wunderkinder.wunderlist/wunderlist.db" )
+db = SQLite3::Database.new( "/Users/olegunnar/Library/Application Support/Titanium/appdata/com.wunderkinder.wunderlist/wunderlist.db" )
 
 db.results_as_hash = true # results returned as a hash, rather than an ordered array
 db.type_translation = true # results resurned as their native types (according to the column definition) rather than String
