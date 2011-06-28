@@ -1,5 +1,6 @@
 # Fork informastion
 This fork removes sort by date, and adds requirement of rubygems
+uses ENV['USER'] for username
 
 # Project Descriptpton  
 Looks up the projects and tasks in your wunderlist.db, and exports them in a ANSI marked up manner appropriate for display in geektool3

@@ -20,7 +20,7 @@ require 'sqlite3'
 # http://stackoverflow.com/questions/2797020/ruby-gem-not-found-although-it-is-installed
 # ###########################################
 
-db = SQLite3::Database.new( "/Users/<<username>>/Library/Application Support/Titanium/appdata/com.wunderkinder.wunderlist/wunderlist.db" )
+db = SQLite3::Database.new( "/Users/" + ENV['USER'] + "/Library/Application Support/Titanium/appdata/com.wunderkinder.wunderlist/wunderlist.db" )
 
 db.results_as_hash = true # results returned as a hash, rather than an ordered array
 db.type_translation = true # results resurned as their native types (according to the column definition) rather than String
